@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="3">
+ <tileset firstgid="1" name="map2" tilewidth="32" tileheight="32" tilecount="50" columns="5">
+  <image source="tempTileSet.png" trans="ff00ff" width="160" height="320"/>
+  <terraintypes>
+   <terrain name="Floor" tile="18">
+    <properties>
+     <property name="speedModifier" type="float" value="1"/>
+    </properties>
+   </terrain>
+   <terrain name="Wall 1" tile="21">
+    <properties>
+     <property name="speedModifier" type="float" value="0.75"/>
+    </properties>
+   </terrain>
+   <terrain name="Wall 2" tile="3">
+    <properties>
+     <property name="speedModifier" type="float" value="0.5"/>
+    </properties>
+   </terrain>
+  </terraintypes>
+  <tile id="0" terrain="1,1,1,2">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="19" y="19" width="13" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="1" terrain="1,1,2,2">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="19" width="32" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="2" terrain="1,1,2,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="19" width="13" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="5" terrain="1,2,1,2">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="19" y="0" width="13" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="6" terrain="2,2,2,2">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="7" terrain="2,1,2,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="13" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="8" terrain="2,2,2,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="32" height="13"/>
+    <object id="2" x="0" y="0" width="13" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="9" terrain="2,2,1,2">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="32" height="13"/>
+    <object id="2" x="19" y="13" width="13" height="19"/>
+   </objectgroup>
+  </tile>
+  <tile id="10" terrain="1,2,1,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="19" y="0" width="13" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="11" terrain="2,2,1,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="32" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="12" terrain="2,1,1,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="13" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="13" terrain="2,1,2,2">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="13" height="32"/>
+    <object id="2" x="0" y="19" width="32" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="14" terrain="1,2,2,2">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="19" y="0" width="13" height="32"/>
+    <object id="2" x="0" y="19" width="19" height="13"/>
+   </objectgroup>
+  </tile>
+  <tile id="15" terrain="0,0,0,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="21.75" y="21.5" width="11.25" height="13.75" visible="0"/>
+    <object id="2" x="22" y="22" width="10" height="10" visible="0"/>
+   </objectgroup>
+  </tile>
+  <tile id="16" terrain="0,0,1,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="22" width="32" height="10"/>
+   </objectgroup>
+  </tile>
+  <tile id="17" terrain="0,0,1,0">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="22" width="10" height="10"/>
+   </objectgroup>
+  </tile>
+  <tile id="18" terrain="0,0,0,0">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="20" terrain="0,1,0,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="true"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="22" y="0" width="10" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="21" terrain="1,1,1,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="22" terrain="1,0,1,0">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="true"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="10" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="23" terrain="1,1,1,0">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="32" height="10"/>
+    <object id="2" x="0" y="0" width="10" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="24" terrain="1,1,0,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="32" height="10"/>
+    <object id="2" x="22" y="10" width="10" height="22"/>
+   </objectgroup>
+  </tile>
+  <tile id="25" terrain="0,1,0,0">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="22" y="0" width="10" height="10"/>
+   </objectgroup>
+  </tile>
+  <tile id="26" terrain="1,1,0,0">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="true"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="32" height="10"/>
+   </objectgroup>
+  </tile>
+  <tile id="27" terrain="1,0,0,0">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="10" height="10"/>
+   </objectgroup>
+  </tile>
+  <tile id="28" terrain="1,0,1,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="0" width="10" height="32"/>
+    <object id="2" x="0" y="22" width="32" height="10"/>
+   </objectgroup>
+  </tile>
+  <tile id="29" terrain="0,1,1,1">
+   <properties>
+    <property name="wallDown" type="bool" value="false"/>
+    <property name="wallLeft" type="bool" value="false"/>
+    <property name="wallRight" type="bool" value="false"/>
+    <property name="wallUp" type="bool" value="false"/>
+   </properties>
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="22" width="32" height="10"/>
+    <object id="2" x="22" y="0" width="10" height="22"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="50" height="50">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,7,7,7,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,7,7,7,7,7,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,9,12,12,12,12,12,12,12,12,10,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,9,13,22,22,22,22,22,22,22,22,11,10,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,9,13,22,22,24,27,27,27,27,25,22,22,11,10,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,9,13,22,22,24,28,19,19,19,19,26,25,22,22,11,10,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,8,22,22,24,28,19,19,19,19,19,19,26,25,22,22,6,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,9,13,22,24,28,19,19,19,19,19,19,19,19,26,25,22,11,10,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,14,3,22,23,19,19,19,16,17,17,18,19,19,19,21,22,1,15,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,8,22,19,19,19,19,21,22,22,23,19,19,19,19,22,6,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,8,22,19,19,19,19,21,22,22,23,19,19,19,19,4,6,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,9,13,22,23,19,19,19,26,27,27,28,19,19,19,21,22,11,10,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,14,3,22,29,18,19,19,19,19,19,19,19,19,16,30,22,1,15,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,8,22,22,29,18,19,19,19,19,19,19,16,30,22,22,6,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,14,3,22,22,29,18,19,19,19,19,16,30,22,22,1,15,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,14,3,22,22,29,17,17,17,17,30,22,22,1,15,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,14,3,22,22,22,22,22,22,22,22,1,15,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,14,2,2,2,2,2,2,2,2,15,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,7,7,7,7,7,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,7,7,7,7,7,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="Object Layer 1"/>
+</map>
