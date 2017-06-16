@@ -10,18 +10,18 @@ using System.Collections.Generic;
 
 public class GunDAO : IGunDAO {
 
-	private Repository<GunInfo> repoGuns;
+	private GunRepository repoGuns;
 
 	public GunDAO () {
-		repoGuns = new Repository<GunInfo>("guns.json");
+		repoGuns = GunRepository.Instance;
 	}
 
 	public List<GunInfo> GetAllGuns() {
-		return repoGuns.getContents();
+		return repoGuns.Contents;
 	}
 
 	public GunInfo GetGunByName(string nameGun) {
-		List <GunInfo> guns = repoGuns.getContents();
+		List <GunInfo> guns = repoGuns.Contents;
 		GunInfo output = new GunInfo();
 
 		foreach(GunInfo gun in guns) {
