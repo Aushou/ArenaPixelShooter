@@ -9,13 +9,14 @@ public class DatabaseHost : MonoBehaviour {
 
 		IGunDAO gunDAO = new GunDAO();
 		List<GunInfo> listInfoGuns = gunDAO.GetAllGuns();
-		foreach (GunInfo item in listInfoGuns) {
-			Debug.Log("Name: " + item.Name +
-				"\nDescription: " + item.Description +
-				"\nMuzzle Velocity: " + item.MuzzleVelocity +
-				"\nMax Jitter: " + item.MaxJitterAngle +
-				"\nSlug: " + item.Slug);
-		}
+		// TODO: Remove commented code
+		//foreach (GunInfo item in listInfoGuns) {
+		//	Debug.Log("Name: " + item.Name +
+		//		"\nDescription: " + item.Description +
+		//		"\nMuzzle Velocity: " + item.MuzzleVelocity +
+		//		"\nMax Jitter: " + item.MaxJitterAngle +
+		//		"\nSlug: " + item.Slug);
+		//}
 	}
 	
 	// Update is called once per frame
