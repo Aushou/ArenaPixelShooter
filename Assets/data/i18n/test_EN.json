@@ -1,0 +1,7 @@
+{
+	"Items" : [
+		{"key" : "menuMain.txtTitle", "value" : "Pixel Block Shooter!"},
+		{"key" : "menuMain.btnPlay.txtPlayButton", "value" : "Play"},
+		{"key" : "canvasChar.txtNametag", "value" : "Meatbag"}
+	]
+}
