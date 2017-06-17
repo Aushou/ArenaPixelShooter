@@ -4,7 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections.Generic;
 
-public class Translator : MonoBehaviour {
+// TODO: Add an interface contract
+public class TranslatorService {
+	private static readonly TranslatorService instance = new TranslatorService();
 	// CONFIG
 	// TODO: Get this from a config file
 	public string folderPath = "/data/i18n/";
@@ -12,11 +14,14 @@ public class Translator : MonoBehaviour {
 	// VALUES
 	private Dictionary<string, string> languageDictionary;
 
-	/*
-	 * INITIALIZATION
-	 */
-	void Start() {
+	private TranslatorService() {
 		ReadAndConstructDictionary();
+	}
+
+	public static TranslatorService Instance {
+		get {
+			return instance;
+		}
 	}
 
 	// TODO: Consider moving this to JsonListHelper or other utility class
@@ -57,7 +62,7 @@ public class Translator : MonoBehaviour {
 		if (languageDictionary != null && languageDictionary.TryGetValue(key, out value)) {
 			return value;
 		} else {
-			Debug.LogError(gameObject.name +
+			Debug.LogError(
 				".getLineByKey(" +
 				key +
 				"): languageDictionary not defined!");
