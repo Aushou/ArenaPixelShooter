@@ -69,6 +69,9 @@ public class PlayerInputHandler : MonoBehaviour {
 		 * DESCRIPTION: Detects player input for actions and returns the
 		 * relevant commands
 		 */
+		if (Input.GetKeyUp(KeyCode.Tab)) {
+			return new SwapWeaponCommand();
+		}
 		if (Input.GetMouseButtonDown(0)) {
 			Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			target = target - (Vector2) transform.position;

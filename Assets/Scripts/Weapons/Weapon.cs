@@ -10,4 +10,5 @@
 
 public abstract class Weapon : MonoBehaviour {
 	public abstract void Attack(Vector2 target);
+	public abstract void SwapWeapon();
 }

@@ -1,11 +1,10 @@
-﻿using UnityEngine;
-
-/*
+﻿/**
  * GUN
  * Author: Christian Gonzalez
  * Description: Base gun that other guns should
  * extend from.
  */
+using UnityEngine;
 
 public class Gun : Weapon {
 
@@ -52,5 +51,14 @@ public class Gun : Weapon {
 			Debug.DrawRay(firePointTransform.position, calculatedShotAngle, Color.red, 0.5f);
 		}
 		return calculatedShotAngle;
+	}
+
+	public override void SwapWeapon() {
+		if (stats.Name == "The Gun") {
+			stats = gunInfoDAO.GetGunInfoByName("The Faster Gun");
+		} else {
+			stats = gunInfoDAO.GetGunInfoByName("The Gun");
+		}
+		
 	}
 }
