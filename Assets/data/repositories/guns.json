@@ -5,14 +5,18 @@
 			"description" : "The most basic gun that ever existed",
 			"muzzleVelocity" : 1,
 			"maxJitterAngle" : 0,
-			"slug" : "the_gun"
+			"slug" : "the_gun",
+			"maxFireRate" : "1",
+			"isAutomatic" : false
 		},
 		{
 			"name" : "The Faster Gun", 
 			"description" : "Almost as lame as The Gun",
 			"muzzleVelocity" : 2,
 			"maxJitterAngle" : 0,
-			"slug" : "the_faster_gun"
+			"slug" : "the_faster_gun",
+			"maxFireRate" : "5",
+			"isAustomatic" : true
 		}
 	]
 }
