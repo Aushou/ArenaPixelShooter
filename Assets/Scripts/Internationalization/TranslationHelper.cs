@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
+﻿using UnityEngine.UI;
 using UnityEngine;
 
 public class TranslationHelper : MonoBehaviour {
@@ -8,7 +6,7 @@ public class TranslationHelper : MonoBehaviour {
 	/*
 	 * MEMBERS
 	 */
-	private Translator translatorDictionary;
+	private TranslatorService translatorDictionary;
 	private string translationKey;
 	private Text myDisplay;
 
@@ -31,17 +29,16 @@ public class TranslationHelper : MonoBehaviour {
 	 */
 	void Gets() {
 		// DESCRIPTION: Get references to external objects
-		translatorDictionary = GetComponentInParent<Translator>();
+		translatorDictionary = TranslatorService.Instance;
 		myDisplay = GetComponent<Text>();
 	}
 
 	void BuildTranslationKey() {
 		// DESCRIPTION: Build translation key from object and parents names
-		GameObject topObject = translatorDictionary.gameObject;
 		GameObject currObject = gameObject;
 		translationKey = "";
 
-		while (currObject != topObject) {
+		while (currObject.transform.parent != null) {
 			// While not looking at the top UI object
 			if(translationKey == "") {
 				// Don't include period on first pass
