@@ -20,7 +20,7 @@ public class GunDAO : IGunDAO {
 		return repoGuns.Contents;
 	}
 
-	public GunInfo GetGunByName(string nameGun) {
+	public GunInfo GetGunInfoByName(string nameGun) {
 		List <GunInfo> guns = repoGuns.Contents;
 		GunInfo output = new GunInfo();
 

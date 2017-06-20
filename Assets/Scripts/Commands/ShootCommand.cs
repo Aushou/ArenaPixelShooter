@@ -20,6 +20,8 @@ class ShootCommand : ICommand {
 
 		if (myWeapon != null) {
 			myWeapon.Attack(target);
-		} else { Debug.LogError("IVALID COMMAND called on " + actor.name + ", no Weapon component found"); }
+		} else { Debug.LogError("IVALID COMMAND called on " +
+				actor.name +
+				", no Weapon component found"); }
 	}
 }

@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour {
 	 */
 	private Vector2 vector = Vector2.zero;
 	private Transform myTransform;
-	private Collider2D myCollider;
 	private bool clearOfSelf = false;
 	// Settings
 	private float speed;
@@ -24,7 +23,6 @@ public class Bullet : MonoBehaviour {
 	 */
 	public void Start () {
 		myTransform = GetComponent<Transform>();
-		myCollider = GetComponent<Collider2D>();
 	} 
 	public void Configure (Vector2 _vector, float _speed) {
 		vector = _vector;

@@ -1,31 +1,27 @@
-﻿using UnityEngine;
-
-/*
+﻿/**
  * GUN
  * Author: Christian Gonzalez
- * Date Created: 16/02/2017
- * Date Modified: 27/02/2017
  * Description: Base gun that other guns should
  * extend from.
  */
+using UnityEngine;
 
 public class Gun : Weapon {
 
-	/*
-	 * FIELDS
-	 */
 	public GameObject myBullet;
 	private Transform myTransform;
 	private Transform firePointTransform;
 	// Settings
-	public bool debug = false;			// Debug mode active?
-	public float muzzleVelocity = 0;	// Fired projectile speed
-	public float maxJitterAngle = 0;	// Max aim drift
+	public bool debug = false;      // Debug mode active?
+	IGunDAO gunInfoDAO;
+	GunInfo stats;
 
 	/*
 	 * INITIALIZATION
 	 */
 	public void Start() {
+		gunInfoDAO = new GunDAO();    // TODO: Consider using service locator pattern
+		stats = gunInfoDAO.GetGunInfoByName("The Gun");
 		myTransform = GetComponent<Transform>();
 		firePointTransform = myTransform.FindChild("FirePoint");
 	} 
@@ -35,7 +31,7 @@ public class Gun : Weapon {
 	 */
 	public override void Attack(Vector2 target) {
 		GameObject firedProjectile = Instantiate(myBullet, firePointTransform.position, Quaternion.identity);
-		firedProjectile.GetComponent<Bullet>().Configure(CalculateShotAngle(target.normalized), muzzleVelocity);
+		firedProjectile.GetComponent<Bullet>().Configure(CalculateShotAngle(target.normalized), stats.MuzzleVelocity);
 	}
 
 	/* Name: Calculate Shot Angle
@@ -46,7 +42,7 @@ public class Gun : Weapon {
 	public Vector2 CalculateShotAngle(Vector2 aimAngle) {
 		Vector2 calculatedShotAngle = aimAngle;
 
-		Quaternion scatterRotation = Quaternion.AngleAxis(Random.Range(-maxJitterAngle, maxJitterAngle), Vector3.forward);
+		Quaternion scatterRotation = Quaternion.AngleAxis(Random.Range(-stats.MaxJitterAngle, stats.MaxJitterAngle), Vector3.forward);
 		calculatedShotAngle = scatterRotation * aimAngle;
 
 		/* Debug lines */
@@ -55,5 +51,14 @@ public class Gun : Weapon {
 			Debug.DrawRay(firePointTransform.position, calculatedShotAngle, Color.red, 0.5f);
 		}
 		return calculatedShotAngle;
+	}
+
+	public override void SwapWeapon() {
+		if (stats.Name == "The Gun") {
+			stats = gunInfoDAO.GetGunInfoByName("The Faster Gun");
+		} else {
+			stats = gunInfoDAO.GetGunInfoByName("The Gun");
+		}
+		
 	}
 }

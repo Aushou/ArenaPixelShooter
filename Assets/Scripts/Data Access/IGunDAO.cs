@@ -8,5 +8,5 @@ using System.Collections.Generic;
 
 public interface IGunDAO {
 	List<GunInfo> GetAllGuns();
-	GunInfo GetGunByName(string nameGun);
+	GunInfo GetGunInfoByName(string nameGun);
 }

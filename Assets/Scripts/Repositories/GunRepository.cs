@@ -4,10 +4,6 @@
  * Description: Concrete implementation of a singleton
  * repository for storying GunInfo objects
  */
-using UnityEngine;
-using System;
-using System.Text;
-using System.IO;
 using System.Collections.Generic;
 
 public sealed class GunRepository : IRepository <GunInfo> {
